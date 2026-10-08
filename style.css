@@ -665,12 +665,7 @@ img {
     gap: 30px;
   }
 
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 720px) {
+  @media (max-width: 720px) {
 
   .navbar {
     min-height: 68px;
@@ -729,8 +724,9 @@ img {
     grid-template-columns: 1fr;
   }
 
+  /* Principal first, Director second */
   .leader-card {
-    grid-template-columns: 135px 1fr;
+    grid-template-columns: 135px minmax(0, 1fr);
   }
 
   .leader-card > img {
@@ -755,6 +751,50 @@ img {
   .whatsapp {
     right: 12px;
     bottom: 12px;
+  }
+
+}
+
+
+@media (max-width: 430px) {
+
+  .brand strong {
+    font-size: 16px;
+  }
+
+  .brand small {
+    font-size: 9px;
+  }
+
+  .hero-copy {
+    padding: 55px 0;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .leader-card {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-card > img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .leader-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .whatsapp {
+    font-size: 12px;
+    padding: 11px 14px;
   }
 
 }
