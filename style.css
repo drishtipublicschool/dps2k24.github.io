@@ -1,6 +1,6 @@
 /* =========================================================
    DRISHTI PUBLIC SCHOOL
-   Complete Professional Website Styles
+   PROFESSIONAL WEBSITE CSS
    ========================================================= */
 
 * {
@@ -30,7 +30,7 @@ a {
 }
 
 section {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 110px;
 }
 
 
@@ -78,13 +78,11 @@ section {
 .school-title h1 {
     font-size: clamp(28px, 5vw, 46px);
     font-weight: 800;
-    letter-spacing: 0.5px;
 }
 
 .school-title p {
     margin-top: 4px;
     font-size: 16px;
-    opacity: 0.95;
 }
 
 .school-title span {
@@ -124,7 +122,6 @@ section {
 .navbar a:hover {
     background: #ffffff;
     color: #123c69;
-    transform: translateY(-2px);
 }
 
 
@@ -140,12 +137,9 @@ section {
             rgba(5, 25, 48, 0.68)
         ),
         url("gate.jpg") center/cover no-repeat;
+
     display: flex;
     align-items: center;
-}
-
-.hero-overlay {
-    width: 100%;
 }
 
 .hero-content {
@@ -162,7 +156,6 @@ section {
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(5px);
     font-size: 14px;
     font-weight: 700;
 }
@@ -209,7 +202,6 @@ section {
 .primary-btn:hover {
     background: #ffd166;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .secondary-btn {
@@ -220,7 +212,6 @@ section {
 .secondary-btn:hover {
     background: #ffffff;
     color: #123c69;
-    transform: translateY(-3px);
 }
 
 
@@ -286,8 +277,7 @@ section {
 }
 
 .welcome-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(25, 55, 90, 0.15);
+    transform: translateY(-7px);
 }
 
 .card-icon {
@@ -333,11 +323,6 @@ section {
     width: 100%;
     height: 430px;
     object-fit: cover;
-    transition: 0.5s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.04);
 }
 
 .about-content h3 {
@@ -373,13 +358,21 @@ section {
     border-radius: 50%;
     background: #e0f2f1;
     color: #00897b;
+}
+
 
 /* =========================================================
-   LEADERSHIP
+   SCHOOL LEADERSHIP
+   COMPACT + PROFESSIONAL
    ========================================================= */
 
 .leadership-section {
-    background: linear-gradient(135deg, #0a2948, #123c69, #176b87);
+    background: linear-gradient(
+        135deg,
+        #0a2948,
+        #123c69,
+        #176b87
+    );
 }
 
 .light-heading span,
@@ -391,62 +384,117 @@ section {
 .leadership-grid {
     max-width: 900px;
     margin: auto;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     gap: 22px;
 }
 
+
+/* LEADER CARD */
+
 .leader-card {
     background: #ffffff;
+
     border-radius: 18px;
+
     overflow: hidden;
+
     display: grid;
-    grid-template-columns: 145px 1fr;
-    min-height: 205px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+
+    grid-template-columns: 140px 1fr;
+
+    min-height: 210px;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.18);
+
     transition: 0.3s ease;
 }
 
 .leader-card:hover {
     transform: translateY(-5px);
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.22);
 }
 
+
+/* LEADER PHOTO */
+
 .leader-photo {
-    height: 205px;
-    background: #f1f5f8;
+    height: 210px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf4f7,
+            #dfeaf0
+        );
+
     display: flex;
+
     align-items: center;
     justify-content: center;
-    padding: 8px;
+
+    padding: 9px;
 }
 
 .leader-photo img {
     width: 100%;
     height: 100%;
+
+    /*
+       IMPORTANT:
+       Full photo visible.
+       No face/body cropping.
+    */
+
     object-fit: contain;
+
     object-position: center;
+
     border-radius: 12px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.10);
 }
+
+
+/* LEADER INFORMATION */
 
 .leader-info {
     padding: 20px 18px;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
 .leader-role {
     color: #176b87;
+
     font-size: 11px;
+
     font-weight: 800;
+
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 }
 
 .leader-info h3 {
     margin: 5px 0 8px;
+
     color: #102a43;
+
     font-size: 20px;
+
+    line-height: 1.25;
 }
 
 .leader-info h3 small {
@@ -456,62 +504,41 @@ section {
 
 .leader-message {
     color: #697b8c;
+
     font-size: 12px;
+
     line-height: 1.5;
+
     margin-bottom: 12px;
 }
 
+
+/* PHONE BUTTON */
+
 .phone-button {
     align-self: flex-start;
+
     padding: 8px 13px;
+
     border-radius: 20px;
+
     background: #123c69;
+
     color: #ffffff;
+
     font-size: 12px;
+
     font-weight: 700;
+
     transition: 0.3s ease;
 }
 
 .phone-button:hover {
     background: #176b87;
+
     transform: translateY(-2px);
 }
 
-
-/* Mobile Leadership */
-
-@media (max-width: 700px) {
-
-    .leadership-grid {
-        grid-template-columns: 1fr;
-        max-width: 420px;
-        gap: 18px;
-    }
-
-    .leader-card {
-        grid-template-columns: 120px 1fr;
-        min-height: 175px;
-    }
-
-    .leader-photo {
-        height: 175px;
-        padding: 7px;
-    }
-
-    .leader-info {
-        padding: 16px 14px;
-    }
-
-    .leader-info h3 {
-        font-size: 18px;
-    }
-
-    .leader-message {
-        font-size: 11px;
-        margin-bottom: 9px;
-    }
-
-}
 
 /* =========================================================
    FACILITIES
@@ -524,24 +551,33 @@ section {
 .facility-grid {
     max-width: 1200px;
     margin: auto;
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 20px;
 }
 
 .facility-card {
     background: #ffffff;
+
     padding: 28px 20px;
+
     border-radius: 17px;
+
     text-align: center;
+
     border: 1px solid #edf1f5;
+
     transition: 0.3s ease;
 }
 
 .facility-card:hover {
     transform: translateY(-6px);
-    border-color: #b8d9e3;
-    box-shadow: 0 12px 28px rgba(25, 55, 90, 0.1);
+
+    box-shadow:
+        0 12px 28px rgba(25, 55, 90, 0.10);
 }
 
 .facility-icon {
@@ -551,12 +587,15 @@ section {
 
 .facility-card h3 {
     color: #123c69;
+
     font-size: 18px;
+
     margin-bottom: 8px;
 }
 
 .facility-card p {
     color: #6a7b8c;
+
     font-size: 14px;
 }
 
@@ -567,10 +606,12 @@ section {
 
 .campus-section {
     background: #123c69;
+
     color: #ffffff;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    align-items: stretch;
 }
 
 .campus-image {
@@ -585,28 +626,39 @@ section {
 
 .campus-content {
     padding: 75px 8%;
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
 .campus-content span {
     color: #ffcf5c;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     font-size: 13px;
 }
 
 .campus-content h2 {
     margin: 12px 0 18px;
+
     font-size: clamp(30px, 4vw, 45px);
+
     line-height: 1.15;
 }
 
 .campus-content p {
     color: #d9e7ef;
+
     margin-bottom: 25px;
+
     max-width: 560px;
 }
 
@@ -625,25 +677,37 @@ section {
 
 .gallery-grid {
     max-width: 1150px;
+
     margin: auto;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
 }
 
 .gallery-item {
     height: 270px;
+
     position: relative;
+
     overflow: hidden;
+
     border-radius: 18px;
+
     background: #eaf0f4;
-    box-shadow: 0 8px 25px rgba(25, 55, 90, 0.1);
+
+    box-shadow:
+        0 8px 25px rgba(25, 55, 90, 0.10);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     transition: 0.5s ease;
 }
 
@@ -653,16 +717,22 @@ section {
 
 .gallery-caption {
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: 0;
+
     padding: 15px;
+
     color: #ffffff;
+
     font-weight: 700;
-    background: linear-gradient(
-        transparent,
-        rgba(0, 0, 0, 0.75)
-    );
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.75)
+        );
 }
 
 
@@ -672,6 +742,7 @@ section {
 
 .admission-section {
     padding: 85px 7%;
+
     background:
         linear-gradient(
             135deg,
@@ -679,7 +750,9 @@ section {
             rgba(23, 107, 135, 0.94)
         ),
         url("classroom.jpg") center/cover;
+
     color: #ffffff;
+
     text-align: center;
 }
 
@@ -690,48 +763,50 @@ section {
 
 .admission-content > span {
     color: #ffcf5c;
+
     font-size: 14px;
+
     font-weight: 800;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
 .admission-content h2 {
     margin: 12px 0;
+
     font-size: clamp(32px, 5vw, 50px);
 }
 
 .admission-content p {
     color: #e4eef4;
+
     font-size: 17px;
 }
 
 .admission-buttons {
     margin-top: 28px;
+
     display: flex;
+
     justify-content: center;
+
     gap: 13px;
+
     flex-wrap: wrap;
 }
 
 .white-btn {
     background: #ffffff;
-    color: #123c69;
-}
 
-.white-btn:hover {
-    background: #ffcf5c;
-    transform: translateY(-3px);
+    color: #123c69;
 }
 
 .outline-white-btn {
     border: 2px solid #ffffff;
-    color: #ffffff;
-}
 
-.outline-white-btn:hover {
-    background: #ffffff;
-    color: #123c69;
+    color: #ffffff;
 }
 
 
@@ -745,37 +820,50 @@ section {
 
 .contact-grid {
     max-width: 1000px;
+
     margin: auto;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 22px;
 }
 
 .contact-card {
     background: #ffffff;
+
     padding: 32px 20px;
+
     text-align: center;
+
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(25, 55, 90, 0.08);
+
+    box-shadow:
+        0 8px 25px rgba(25, 55, 90, 0.08);
 }
 
 .contact-icon {
     font-size: 35px;
+
     margin-bottom: 12px;
 }
 
 .contact-card h3 {
     color: #123c69;
+
     margin-bottom: 10px;
 }
 
 .contact-card p {
     color: #657789;
+
     margin-bottom: 8px;
 }
 
 .contact-card a {
     color: #176b87;
+
     font-weight: 800;
 }
 
@@ -786,73 +874,91 @@ section {
 
 .footer {
     background: #081d33;
+
     color: #ffffff;
 }
 
 .footer-inner {
     max-width: 1200px;
+
     margin: auto;
+
     padding: 45px 7%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 30px;
 }
 
 .footer-brand {
     display: flex;
+
     align-items: center;
+
     gap: 15px;
 }
 
 .footer-brand img {
     width: 65px;
     height: 65px;
-    background: #ffffff;
-    padding: 4px;
-    border-radius: 50%;
-    object-fit: contain;
-}
 
-.footer-brand h3 {
-    margin-bottom: 4px;
+    background: #ffffff;
+
+    padding: 4px;
+
+    border-radius: 50%;
+
+    object-fit: contain;
 }
 
 .footer-brand p {
     color: #aebdca;
+
     font-size: 14px;
 }
 
 .footer-links {
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
     justify-content: center;
 }
 
 .footer-links a {
     color: #d7e2ea;
-    font-size: 14px;
-}
 
-.footer-links a:hover {
-    color: #ffcf5c;
+    font-size: 14px;
 }
 
 .footer-bottom {
     padding: 18px 7%;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+
     display: flex;
+
     justify-content: space-between;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
     color: #91a3b3;
+
     font-size: 13px;
 }
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -863,18 +969,18 @@ section {
 
     .leadership-grid {
         grid-template-columns: 1fr;
-        max-width: 750px;
+
+        max-width: 650px;
     }
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -885,7 +991,9 @@ section {
 
     .header-inner {
         min-height: auto;
+
         padding: 18px 15px;
+
         flex-direction: column;
     }
 
@@ -904,6 +1012,7 @@ section {
 
     .school-title span {
         font-size: 10px;
+
         letter-spacing: 1px;
     }
 
@@ -913,6 +1022,7 @@ section {
 
     .navbar a {
         padding: 7px 9px;
+
         font-size: 12px;
     }
 
@@ -946,14 +1056,9 @@ section {
 
     .welcome-grid,
     .about-grid,
-    .leadership-grid,
     .campus-section,
     .contact-grid {
         grid-template-columns: 1fr;
-    }
-
-    .welcome-card {
-        padding: 28px 20px;
     }
 
     .about-grid {
@@ -964,21 +1069,67 @@ section {
         height: 300px;
     }
 
-    .leader-card {
+
+    /* -----------------------------------------
+       MOBILE LEADERSHIP
+       ----------------------------------------- */
+
+    .leadership-grid {
         grid-template-columns: 1fr;
+
+        max-width: 430px;
+
+        gap: 18px;
+    }
+
+    .leader-card {
+        grid-template-columns: 115px 1fr;
+
+        min-height: 175px;
+
+        border-radius: 16px;
     }
 
     .leader-photo {
-        height: 330px;
-        min-height: 330px;
+        height: 175px;
+
+        padding: 7px;
+    }
+
+    .leader-photo img {
+        object-fit: contain;
+
+        border-radius: 10px;
     }
 
     .leader-info {
-        padding: 25px 20px;
+        padding: 15px 14px;
     }
+
+    .leader-info h3 {
+        font-size: 18px;
+    }
+
+    .leader-message {
+        font-size: 11px;
+
+        margin-bottom: 9px;
+    }
+
+    .phone-button {
+        padding: 7px 11px;
+
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------
+       FACILITIES
+       ----------------------------------------- */
 
     .facility-grid {
         grid-template-columns: repeat(2, 1fr);
+
         gap: 12px;
     }
 
@@ -1010,12 +1161,9 @@ section {
         height: 280px;
     }
 
-    .contact-grid {
-        gap: 15px;
-    }
-
     .footer-inner {
         flex-direction: column;
+
         text-align: center;
     }
 
@@ -1025,9 +1173,9 @@ section {
 
     .footer-bottom {
         justify-content: center;
+
         text-align: center;
     }
-
 }
 
 
@@ -1045,12 +1193,8 @@ section {
         font-size: 34px;
     }
 
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
+    .hero-buttons .btn,
     .admission-buttons .btn {
         width: 100%;
     }
-
 }
